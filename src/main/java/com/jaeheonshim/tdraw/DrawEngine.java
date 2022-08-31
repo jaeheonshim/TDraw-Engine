@@ -4,7 +4,11 @@ import javax.swing.*;
 import java.awt.*;
 
 public class DrawEngine {
-    public DrawEngine() {
+    private Turtle turtle;
+
+    public DrawEngine(Turtle turtle) {
+        this.turtle = turtle;
+
         EventQueue.invokeLater(new Runnable() {
             @Override
             public void run() {
@@ -17,7 +21,7 @@ public class DrawEngine {
                 JFrame frame = new JFrame("TDraw");
                 frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
                 frame.setLayout(new BorderLayout());
-                frame.add(new TDrawPane());
+                frame.add(new TDrawPane(turtle));
                 frame.pack();
                 frame.setLocationRelativeTo(null);
                 frame.setVisible(true);
