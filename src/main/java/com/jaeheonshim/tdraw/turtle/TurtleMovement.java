@@ -1,6 +1,8 @@
-package com.jaeheonshim.tdraw;
+package com.jaeheonshim.tdraw.turtle;
 
-public class TurtleMovement {
+import com.jaeheonshim.tdraw.Vector2;
+
+public abstract class TurtleMovement {
     protected Vector2 position = new Vector2(0, 0);
     protected double heading = 0;
 
@@ -14,18 +16,22 @@ public class TurtleMovement {
 
     public void forward(int d) {
         position.add(d * cosDeg(heading), d * sinDeg(heading));
+        afterMove();
     }
 
     public void backward(int d) {
         position.add(-d * cosDeg(heading), -d * sinDeg(heading));
+        afterMove();
     }
 
     public void right(int d) {
         position.add(d * cosDeg(heading - 90), d * sinDeg(heading - 90));
+        afterMove();
     }
 
     public void left(int d) {
         position.add(d * cosDeg(heading + 90), d * sinDeg(heading + 90));
+        afterMove();
     }
 
     public void setPos(int x, int y) {
@@ -60,4 +66,6 @@ public class TurtleMovement {
     public double getHeading() {
         return heading;
     }
+
+    protected abstract void afterMove();
 }

@@ -14,6 +14,11 @@ public class Vector2 {
         this.y = y;
     }
 
+    public Vector2(Vector2 vector2) {
+        this.x = vector2.x;
+        this.y = vector2.y;
+    }
+
     public void add(Vector2 vec2) {
         x += vec2.x;
         y += vec2.y;
