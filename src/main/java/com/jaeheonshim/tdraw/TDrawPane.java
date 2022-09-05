@@ -9,14 +9,18 @@ import java.util.List;
 
 public class TDrawPane extends JPanel {
     private Turtle turtle;
+    private int width;
+    private int height;
 
-    public TDrawPane(Turtle turtle) {
+    public TDrawPane(Turtle turtle, int width, int height) {
         this.turtle = turtle;
+        this.width = width;
+        this.height = height;
     }
 
     @Override
     public Dimension getPreferredSize() {
-        return new Dimension(760, 610);
+        return new Dimension(width, height);
     }
 
     @Override

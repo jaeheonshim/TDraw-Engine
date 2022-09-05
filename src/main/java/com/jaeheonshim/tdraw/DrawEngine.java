@@ -9,7 +9,7 @@ public class DrawEngine {
     private Turtle turtle;
     private JFrame frame;
 
-    public DrawEngine(Turtle turtle) {
+    public DrawEngine(Turtle turtle, int width, int height) {
         this.turtle = turtle;
 
         try {
@@ -21,7 +21,7 @@ public class DrawEngine {
         DrawEngine.this.frame = new JFrame("TDraw");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setLayout(new BorderLayout());
-        frame.add(new TDrawPane(turtle));
+        frame.add(new TDrawPane(turtle, 760, 610));
         frame.pack();
         frame.setLocationRelativeTo(null);
         frame.setVisible(true);
