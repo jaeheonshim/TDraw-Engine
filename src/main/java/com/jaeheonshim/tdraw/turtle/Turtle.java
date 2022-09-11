@@ -48,4 +48,40 @@ public class Turtle extends TurtleDrawing {
     public static void setHeadless(boolean headless) {
         Turtle.headless = headless;
     }
+
+    /**
+     * Trigonometric sin function, in degrees
+     * @param a angle in degrees
+     * @return Math.sin(Math.toRadians(a))
+     */
+    public static double sin(double a) {
+        return Math.sin(Math.toRadians(a));
+    }
+
+    /**
+     * Trigonometric cosine function, in degrees
+     * @param a angle in degrees
+     * @return Math.cos(Math.toRadians(a))
+     */
+    public static double cos(double a) {
+        return Math.cos(Math.toRadians(a));
+    }
+
+    /**
+     * Trigonometric tangent function, in degrees
+     * @param a angle in degrees
+     * @return Math.tan(Math.toRadians(a))
+     */
+    public static double tan(double a) {
+        return Math.tan(Math.toRadians(a));
+    }
+
+    /**
+     * Trigonometric inverse tangent function, in degrees
+     * @param r ratio
+     * @return Math.toDegrees(Math.atan(a))
+     */
+    public static double atan(double r) {
+        return Math.toDegrees(Math.atan(r));
+    }
 }

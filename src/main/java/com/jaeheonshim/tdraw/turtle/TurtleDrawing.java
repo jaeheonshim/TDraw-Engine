@@ -49,11 +49,18 @@ public class TurtleDrawing extends TurtleMovement {
         this.height = height;
     }
 
+
+    /**
+     * Puts the pen of the turtle down to start drawing
+     */
     public void penDown() {
         isPenDown = true;
         addDrawPoint(new Vector2(getPosition()));
     }
 
+    /**
+     * Lifts the pen of the turtle up to stop drawing
+     */
     public void penUp() {
         isPenDown = false;
     }
@@ -62,15 +69,23 @@ public class TurtleDrawing extends TurtleMovement {
 
     }
 
+    /**
+     * Sets the color of the pen
+     * @param color Color
+     */
     public void setColor(Color color) {
         this.color = color;
     }
 
+    /**
+     * Returns true if the pen is down (and the turtle is currently drawing) and false if the pen is up
+     * @return Current state of the turtle's pen
+     */
     public boolean isPenDown() {
         return isPenDown;
     }
 
-    public void addDrawPoint(Vector2 vector2) {
+    private void addDrawPoint(Vector2 vector2) {
         drawPoints.add(new DrawPoint(vector2, heading, isPenDown, color));
     }
 

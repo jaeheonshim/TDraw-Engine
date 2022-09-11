@@ -71,6 +71,7 @@ public abstract class TurtleMovement {
     public void setPosition(int x, int y) {
         position.x = x;
         position.y = y;
+        afterMove();
     }
 
     public void setPos(int x, int y) {
@@ -91,6 +92,7 @@ public abstract class TurtleMovement {
      */
     public void setX(int x) {
         position.x = x;
+        afterMove();
     }
 
     /**
@@ -100,6 +102,7 @@ public abstract class TurtleMovement {
      */
     public void setY(int y) {
         position.y = y;
+        afterMove();
     }
 
     /**

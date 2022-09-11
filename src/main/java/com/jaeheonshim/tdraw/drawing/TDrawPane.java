@@ -38,7 +38,8 @@ public class TDrawPane extends JPanel {
             TurtleDrawing.DrawPoint curr = drawPointList.get(i);
 
             g.setColor(curr.getColor());
-            g.drawLine(ccX((int) Math.round(prev.getLocation().x)), ccY((int) Math.round(prev.getLocation().y)), ccX((int) Math.round(curr.getLocation().x)), ccY((int) Math.round(curr.getLocation().y)));
+            if(curr.isDraw())
+                g.drawLine(ccX((int) Math.round(prev.getLocation().x)), ccY((int) Math.round(prev.getLocation().y)), ccX((int) Math.round(curr.getLocation().x)), ccY((int) Math.round(curr.getLocation().y)));
         }
     }
 
