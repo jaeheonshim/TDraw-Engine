@@ -68,16 +68,20 @@ public abstract class TurtleMovement {
      * @param x x coordinate of the new position
      * @param y y coordinate of the new position
      */
-    public void setPos(int x, int y) {
+    public void setPosition(int x, int y) {
         position.x = x;
         position.y = y;
+    }
+
+    public void setPos(int x, int y) {
+        setPosition(x, y);
     }
 
     /**
      * Moves the turtle back to the (0, 0) position
      */
     public void home() {
-        setPos(0, 0);
+        setPosition(0, 0);
     }
 
     /**
