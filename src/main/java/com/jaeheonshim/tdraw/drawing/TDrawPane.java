@@ -1,4 +1,4 @@
-package com.jaeheonshim.tdraw;
+package com.jaeheonshim.tdraw.drawing;
 
 import com.jaeheonshim.tdraw.turtle.Turtle;
 import com.jaeheonshim.tdraw.turtle.TurtleDrawing;

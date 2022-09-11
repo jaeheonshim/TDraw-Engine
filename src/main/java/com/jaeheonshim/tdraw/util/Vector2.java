@@ -1,4 +1,4 @@
-package com.jaeheonshim.tdraw;
+package com.jaeheonshim.tdraw.util;
 
 public class Vector2 {
     public double x;

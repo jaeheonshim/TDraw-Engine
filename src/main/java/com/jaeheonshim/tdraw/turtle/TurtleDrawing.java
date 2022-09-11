@@ -1,6 +1,6 @@
 package com.jaeheonshim.tdraw.turtle;
 
-import com.jaeheonshim.tdraw.Vector2;
+import com.jaeheonshim.tdraw.util.Vector2;
 
 import java.util.LinkedList;
 import java.util.List;

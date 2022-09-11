@@ -1,6 +1,6 @@
 package com.jaeheonshim.tdraw.turtle;
 
-import com.jaeheonshim.tdraw.DrawEngine;
+import com.jaeheonshim.tdraw.drawing.DrawEngine;
 
 public class Turtle extends TurtleDrawing {
     private DrawEngine drawEngine;
@@ -9,11 +9,14 @@ public class Turtle extends TurtleDrawing {
     private static boolean allowOneInstance = false;
     private static Turtle instance = null;
 
+    private static final int WIDTH = 760;
+    private static final int HEIGHT = 510;
+
     public Turtle() {
-        super(760, 610);
+        super(WIDTH, HEIGHT);
 
         if(!headless) {
-            drawEngine = new DrawEngine(this, 760, 610);
+            drawEngine = new DrawEngine(this, WIDTH, HEIGHT);
         }
 
         if(allowOneInstance) {
