@@ -4,6 +4,8 @@ import com.jaeheonshim.tdraw.turtle.TurtleDrawing;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
+import java.awt.*;
+
 public class JSONDrawingExporter {
     public static JSONObject export(TurtleDrawing turtleDrawing) {
         JSONArray points = new JSONArray();
@@ -13,6 +15,9 @@ public class JSONDrawingExporter {
             drawPointJSON.put("y", drawPoint.getLocation().y);
             drawPointJSON.put("heading", drawPoint.getHeading());
             drawPointJSON.put("draw", drawPoint.isDraw());
+
+            Color color = drawPoint.getColor();
+            drawPointJSON.put("color", String.format("#%02x%02x%02x", color.getRed(), color.getGreen(), color.getBlue()));
 
             points.put(drawPointJSON);
         }

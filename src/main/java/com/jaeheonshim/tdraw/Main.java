@@ -12,7 +12,7 @@ import java.io.IOException;
 public class Main {
     static {
         Turtle.setAllowOneInstance(true);
-        Turtle.setHeadless(false);
+        Turtle.setHeadless(true);
 
         Runtime.getRuntime().addShutdownHook(new Thread() {
             @Override
