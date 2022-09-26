@@ -30,6 +30,8 @@ public class TDrawPane extends JPanel {
 
         g.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
 
+        g.setColor(turtle.getBackgroundColor());
+        g.fillRect(0, 0, width, height);
         g.setColor(Color.BLACK);
 
         List<TurtleDrawing.DrawPoint> drawPointList = turtle.getDrawPoints();

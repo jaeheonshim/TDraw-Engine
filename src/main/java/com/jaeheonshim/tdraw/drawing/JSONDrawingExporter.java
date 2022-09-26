@@ -25,6 +25,9 @@ public class JSONDrawingExporter {
         JSONObject exportObject = new JSONObject();
         exportObject.put("width", turtleDrawing.getWidth());
         exportObject.put("height", turtleDrawing.getHeight());
+
+        Color backgroundColor = turtleDrawing.getBackgroundColor();
+        exportObject.put("backgroundColor", String.format("#%02x%02x%02x", backgroundColor.getRed(), backgroundColor.getGreen(), backgroundColor.getBlue()));
         exportObject.put("points", points);
 
         return exportObject;

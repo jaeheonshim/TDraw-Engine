@@ -12,7 +12,7 @@ import java.io.IOException;
 public class Main {
     static {
         Turtle.setAllowOneInstance(true);
-        Turtle.setHeadless(true);
+        Turtle.setHeadless(false);
 
         Runtime.getRuntime().addShutdownHook(new Thread() {
             @Override
@@ -34,6 +34,7 @@ public class Main {
 
     public static void main(String[] args) throws IOException {
         Turtle t = new Turtle();
+        t.setBackgroundColor(Color.BLACK);
         t.setHeading(60);
 
         triangle(t, new double[] {-240.0, -240.0, 0.0, 175.0}, 0);

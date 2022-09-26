@@ -124,14 +124,26 @@ Puts the pen of the turtle down to start drawing
 
 Lifts the pen of the turtle up to stop drawing
 
+### `public boolean isPenDown()`
+
+Returns true if the pen is down (and the turtle is currently drawing) and false if the pen is up
+
+* **Returns:** Current state of the turtle's pen
+
 ### `public void setColor(Color color)`
 
 Sets the color of the pen
 
 * **Parameters:** `color` — Color
 
-### `public boolean isPenDown()`
+### `public void setBackgroundColor(Color backgroundColor)`
 
-Returns true if the pen is down (and the turtle is currently drawing) and false if the pen is up
+Set the background color of the turtle canvas
 
-* **Returns:** Current state of the turtle's pen
+* **Parameters:** `backgroundColor` — the background color
+
+### `public Color getBackgroundColor()`
+
+Get the background color of the turtle canvas
+
+* **Returns:** the background color

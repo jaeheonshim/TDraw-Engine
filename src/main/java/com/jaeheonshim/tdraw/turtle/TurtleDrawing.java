@@ -40,6 +40,7 @@ public class TurtleDrawing extends TurtleMovement {
     private List<DrawPoint> drawPoints = new LinkedList<>();
     protected boolean isPenDown;
     protected Color color = Color.BLACK;
+    protected Color backgroundColor = Color.WHITE;
 
     protected int width;
     protected int height;
@@ -48,7 +49,6 @@ public class TurtleDrawing extends TurtleMovement {
         this.width = width;
         this.height = height;
     }
-
 
     /**
      * Puts the pen of the turtle down to start drawing
@@ -99,6 +99,22 @@ public class TurtleDrawing extends TurtleMovement {
 
     public int getHeight() {
         return height;
+    }
+
+    /**
+     * Set the background color of the turtle canvas
+     * @param backgroundColor the background color
+     */
+    public void setBackgroundColor(Color backgroundColor) {
+        this.backgroundColor = backgroundColor;
+    }
+
+    /**
+     * Get the background color of the turtle canvas
+     * @return the background color
+     */
+    public Color getBackgroundColor() {
+        return backgroundColor;
     }
 
     @Override
